@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="{{ url_for('show_national_data') }}">
+
+  <script src={{ url_for('static', filename='d3.v3.min.js') }}
+          charset="utf-8"></script>
+
+  <link rel=stylesheet type=text/css
+        href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon"
+        type="image/jpeg"
+        href="{{ url_for('static', filename='images/favicon.jpeg') }}">
+  {% block head %}
+  <title>{%block title %}{% endblock %} - Work Work Money Money</title>
+  {% endblock %}
+</head>
+<body>
+<div class=page>
+  {% block content %}
+  {% endblock %}
+</div>
+</body>
+</html>
